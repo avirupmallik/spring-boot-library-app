@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: 'jdbc:mysql://localhost:3306/reactlibrarydatabase?useSSL=false&useUnicode=yes&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&serverTimezone=UTC'
+    username: 'root'
+    password: 'Ar!ndam0112358'
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: 'org.hibernate.dialect.MySQL8Dialect'
+
+  data:
+    rest:
+      base-path: '/api'
