@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://${RDS_HOSTNAME:localhost}:${RDS_PORT:3306}/${RDS_DB_NAME:reactlibrarydatabase}
-    username: ${RDS_USERNAME}
-    password: ${RDS_PASSWORD}
+    url: jdbc:mysql://google/reactlibrarydatabase?cloudSqlInstance=inlaid-micron-435801-j1:us-central1:reactlibrarydatabase&socketFactory=com.google.cloud.sql.mysql.SocketFactory
+    username: <username>
+    password: <Password>
   jpa:
     properties:
       hibernate:
@@ -14,21 +14,3 @@ spring:
   data:
     rest:
       base-path: '/api'
-
-okta:
-  oauth2:
-    client-id: ${OKTA_CLIENTID}
-    issuer: ${OKTA_ISSUER}
-
-server:
-  port: '8081'
-  ssl:
-    enabled: true
-    key-alias: 'luv2code'
-    key-store: 'classpath:luv2code-keystore.p12'
-    key-store-password: 'secret'
-    key-store-type: 'PKCS12'
-
-stripe:
-  key:
-    secret: ${STRIPE_SECRET}
